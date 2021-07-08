@@ -31,4 +31,10 @@ public class PostController {
     public Post save(@RequestBody Post post) {
         return service.save(post);
     }
+
+
+    @DeleteMapping("/{id}")
+    public void removeById(@PathVariable long id) {
+        service.removeById(id);
+    }
 }
